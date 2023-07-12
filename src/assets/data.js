@@ -1,4 +1,4 @@
-[
+const data = [
     {
         "id": 1,
         "name": "blue",
@@ -15,3 +15,5 @@
         "code": "#ffc0cb"
     }
 ]
+
+export default data
