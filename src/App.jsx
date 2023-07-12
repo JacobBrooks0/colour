@@ -1,4 +1,4 @@
-import Colors from './pages/Colors'
+import Colors from './pages/ColorsList'
 import './App.css'
 
 function App() {
