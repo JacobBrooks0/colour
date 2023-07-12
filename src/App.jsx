@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import {Home,Colors} from './pages';
+import {Home,Colors,PickColor} from './pages';
 import './App.css';
 // roots acts as container for all root elements 
 // , Color, CreateColor
@@ -12,10 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Nav/>}>   
           <Route index element={<Home />}/>        
-          {/* <Route path="/createcolor" element={<Color />}/>  */}
+          {/* <Route path="/new" element={<CreateColor />}/>  */}
           <Route path="colors">
             <Route index element={<Colors />}/>  
-            {/* <Route path=":color" element={<PickColour />}/>   */}
+            <Route path=":color" element={<PickColor />}/> 
           </Route>
           <Route path="*" element={<h1>Not Found</h1>}/>  
         </Route>

@@ -1,13 +1,12 @@
-import { useEffect, useState, Link } from "react"
+import { useEffect, useState } from "react"
 import data from '../../assets/data.js'
+import { Link } from 'react-router-dom';
 
 function Colors() {
     const [colors, setColors] = useState([])
 
     useEffect(() => {
         setColors(data)
-        console.log(data)
-        console.log(colors)
     },[])
 
     return(
@@ -15,8 +14,10 @@ function Colors() {
             <div className="colors">
                 <ul className="colorsList">
                     {colors.map((color) => {
-                        return(<li  key={color.id}>{color.name}</li>)
-                        // return(<Link to={`/colors/:color`} key={color.id}>{color.name}</Link>)
+                        // return(<li  key={color.id}>{color.name}</li>)
+                        return(<p>
+                            <Link to={`/colors/${color.name}`} key={color.id}>{color.name}</Link>
+                        </p>)
                     })}
                 </ul>
             </div>
