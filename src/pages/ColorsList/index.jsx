@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, Link } from "react"
 import data from '../../assets/data.js'
 
 function Colors() {
@@ -15,7 +15,8 @@ function Colors() {
             <div className="colors">
                 <ul className="colorsList">
                     {colors.map((color) => {
-                        return(<Link to={`/colors/:color`} key={color.id}>{color.name}</Link>)
+                        return(<li  key={color.id}>{color.name}</li>)
+                        // return(<Link to={`/colors/:color`} key={color.id}>{color.name}</Link>)
                     })}
                 </ul>
             </div>
